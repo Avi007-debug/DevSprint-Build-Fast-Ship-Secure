@@ -1,53 +1,50 @@
-
 # AirZy Flight Platform
 
 AI-powered travel platform with a React frontend and FastAPI backend using Supabase.
 
 ## Project Structure
 
-- `frontend/` - Frontend (React + Vite)
-- `backend/` - Backend (FastAPI + Supabase)
-- `backend/supabase/schema.sql` - SQL schema and seed data
+- `frontend/` - React + Vite client.
+- `backend/` - FastAPI service and Supabase integration.
+- `backend/supabase/schema.sql` - SQL schema and seed data.
 
-## Implemented Features
+## Features
 
-- User Authentication: signup and login with Supabase Auth
-- User Profile: profile fetch and display
-- Flight Search: source, destination, date query from homepage
-- Flight Listing: dynamic list from Supabase table with filters
-- Flight Booking: booking creation with passenger details
-- AI Travel Chatbot: backend-powered Q&A endpoint
-- Price Alerts: route/date/preferred-price alert creation
-- AI Itinerary Generator: backend-generated daily plan by destination/interests
-- Carbon Footprint Tracker: eco-flight data from backend
-- Squad Trip Split: create squad + member list + shared expense
-- Vibe Mode Toggle: persisted per user in backend preferences
-- Swipe Destination Discovery: like/skip destination swipes
-- Reel-Worthy Destination Score: destination score cards from backend data
-- Travel Buddy Finder: profile creation + matching by destination
+- User authentication with Supabase Auth.
+- User profile fetch and display.
+- Flight search and listing.
+- Flight booking with passenger details.
+- AI travel chatbot endpoint.
+- Price alerts and itinerary generation.
+- Carbon tracker, squad split, vibe mode, swipe discovery, and buddy matching.
 
 ## Environment Variables
 
-Create `frontend/.env` from `frontend/.env.example`:
+Create `frontend/.env`:
 
-- `VITE_API_BASE_URL=http://localhost:8000`
+```bash
+VITE_API_BASE_URL=http://localhost:8000
+```
 
-Create `backend/.env` from `backend/.env.example`:
+Create `backend/.env`:
 
-- `API_HOST=0.0.0.0`
-- `API_PORT=8000`
-- `FRONTEND_URL=http://localhost:5173`
-- `SUPABASE_URL=...`
-- `SUPABASE_ANON_KEY=...`
-- `SUPABASE_SERVICE_ROLE_KEY=...`
+```bash
+API_HOST=0.0.0.0
+API_PORT=8000
+FRONTEND_URL=http://localhost:5173
+SUPABASE_URL=...
+SUPABASE_ANON_KEY=...
+SUPABASE_SERVICE_ROLE_KEY=...
+```
 
-## Supabase Setup
+## Setup
 
-1. Create a new Supabase project.
-2. Open SQL editor and run `backend/supabase/schema.sql`.
-3. Copy project URL + keys into `backend/.env`.
+1. Create a Supabase project.
+2. Run `backend/supabase/schema.sql` in the Supabase SQL editor.
+3. Copy the Supabase URL and keys into `backend/.env`.
+4. Make sure `backend/.env` stays out of git history.
 
-## Run Frontend + Backend
+## Run The App
 
 Frontend:
 
@@ -62,12 +59,37 @@ Backend:
 ```bash
 cd backend
 python -m venv .venv
-.venv\\Scripts\\activate
+.venv\Scripts\activate
 pip install -r requirements.txt
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
 Health check:
 
-`GET http://localhost:8000/health`
-  
+```bash
+GET http://localhost:8000/health
+```
+
+## Secret Leak Cleanup
+
+If `backend/.env` was ever committed, stop tracking it first:
+
+```bash
+git rm --cached backend/.env
+git commit -m "remove backend env from tracking"
+```
+
+Then add or confirm the ignore rule:
+
+```bash
+echo "backend/.env" >> .gitignore
+```
+
+To check whether the secret appears in history:
+
+```bash
+git log --all --full-history -- "*.env"
+```
+
+If a secret was pushed, rotate the credential after cleanup. History cleanup does not protect old clones or forks.
+
