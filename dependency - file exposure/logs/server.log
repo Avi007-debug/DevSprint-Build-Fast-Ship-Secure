@@ -1,0 +1,13 @@
+[2024-11-01 09:12:03] INFO  Server started on port 3000
+[2024-11-01 09:14:22] INFO  POST /api/chat — user: priya.sharma@gmail.com — message: "explain binary search"
+[2024-11-01 09:14:23] INFO  AI response sent (tokens: 312)
+[2024-11-01 09:17:45] INFO  POST /api/upload — file: sample_resume.txt — user: priya.sharma@gmail.com — saved at: /home/ubuntu/studybot/uploads/sample_resume.txt
+[2024-11-01 09:22:01] INFO  POST /api/chat — user: rohan.mehta@rvce.edu.in — message: "what is normalisation in DBMS"
+[2024-11-01 09:22:02] INFO  AI response sent (tokens: 518)
+[2024-11-01 10:05:33] INFO  POST /api/chat — user: aditya.k@gmail.com — message: "my student ID is STU-20240892, help me with my assignment"
+[2024-11-01 10:31:19] INFO  POST /api/upload — file: notes_dbms_week3.txt — user: rohan.mehta@rvce.edu.in — saved at: /home/ubuntu/studybot/uploads/notes_dbms_week3.txt
+[2024-11-01 10:55:10] INFO  GET /api/upload/list — returned 4 files — user: unauthenticated
+[2024-11-01 11:03:42] INFO  GET /test_data/users.json — 200 OK — IP: 103.47.12.201
+[2024-11-01 11:03:51] INFO  GET /logs/server.log — 200 OK — IP: 103.47.12.201
+[2024-11-01 11:04:10] WARN  GET /app.js — 200 OK — IP: 103.47.12.201
+[2024-11-01 11:04:22] WARN  GET /routes/upload.js — 200 OK — IP: 103.47.12.201

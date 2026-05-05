@@ -1,0 +1,35 @@
+[
+  {
+    "id": "USN-001",
+    "name": "Priya Sharma",
+    "email": "priya.sharma@gmail.com",
+    "phone": "+91-98765-43210",
+    "college": "RVCE",
+    "year": 2,
+    "password_hash": "5f4dcc3b5aa765d61d8327deb882cf99",
+    "gemini_usage_tokens": 4821,
+    "joined": "2024-09-01"
+  },
+  {
+    "id": "USN-002",
+    "name": "Rohan Mehta",
+    "email": "rohan.mehta@rvce.edu.in",
+    "phone": "+91-98765-01234",
+    "college": "RVCE",
+    "year": 1,
+    "password_hash": "827ccb0eea8a706c4c34a16891f84e7b",
+    "gemini_usage_tokens": 1103,
+    "joined": "2024-09-14"
+  },
+  {
+    "id": "USN-003",
+    "name": "Aditya Kumar",
+    "email": "aditya.k@gmail.com",
+    "phone": "+91-91234-56789",
+    "college": "RVCE",
+    "year": 2,
+    "password_hash": "e10adc3949ba59abbe56e057f20f883e",
+    "gemini_usage_tokens": 2290,
+    "joined": "2024-09-22"
+  }
+]

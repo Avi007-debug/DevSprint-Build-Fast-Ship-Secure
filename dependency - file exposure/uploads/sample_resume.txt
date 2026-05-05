@@ -1,0 +1,29 @@
+Priya Sharma
+priya.sharma@gmail.com | +91-98765-43210 | github.com/priyasharma
+
+EDUCATION
+---------
+B.E. Computer Science — RV College of Engineering, Bengaluru
+Expected Graduation: 2027 | CGPA: 8.9 / 10
+
+SKILLS
+------
+Languages  : Python, JavaScript, C++
+Frameworks : React, Node.js, Flask
+Tools      : Git, Docker, VS Code, Postman
+
+PROJECTS
+--------
+1. MoodTracker — React + Firebase mood journaling app
+2. Canteen QR System — QR-based food ordering for college canteen
+
+INTERNSHIPS
+-----------
+Web Dev Intern — StartupXYZ, Bengaluru (Jun–Aug 2024)
+• Built REST APIs using Node.js + Express
+• Integrated payment gateway (Razorpay)
+
+ACHIEVEMENTS
+------------
+• 2nd place — HackRVCE 2024
+• DSA Rating: 1450 on LeetCode

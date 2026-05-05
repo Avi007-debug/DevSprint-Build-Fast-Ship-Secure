@@ -1,0 +1,17 @@
+DBMS Week 3 Notes — Normalisation
+==================================
+Uploaded by: rohan.mehta@rvce.edu.in
+
+1NF: No repeating groups. Each column must have atomic values.
+2NF: 1NF + no partial dependency on a composite key.
+3NF: 2NF + no transitive dependencies.
+BCNF: Stricter form of 3NF — every determinant must be a candidate key.
+
+Example:
+  Student(rollNo, name, courseId, courseName, marks)
+  Problem: courseName depends on courseId, not rollNo.
+  Fix:     Split into Student(rollNo, name) and Course(courseId, courseName)
+            and Enrolment(rollNo, courseId, marks).
+
+Personal note: exam is on the 14th, need to revise ER diagrams too.
+Rohan's phone (study group): 9876501234
